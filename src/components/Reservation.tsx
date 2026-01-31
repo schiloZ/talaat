@@ -112,7 +112,7 @@ ${formData.instructions ? `• Instructions: ${formData.instructions}` : ""}
 Merci de confirmer ma commande ! 🙏`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappNumber = "2250708868786"; // Numéro sans le +
+    const whatsappNumber = "2250708868786";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
     window.open(whatsappUrl, "_blank");
@@ -311,11 +311,54 @@ Merci de confirmer ma commande ! 🙏`;
             <h4 className="font-montserrat text-xs tracking-[3px] uppercase text-white/70 mb-2">
               Notre Adresse
             </h4>
-            <p className="text-lg text-white">
-              2 Plateaux
+            <p className="text-lg text-white mb-4">
+              Chez Talaat - 2 Plateaux
               <br />
               Abidjan, Côte d&apos;Ivoire
             </p>
+
+            {/* Google Maps Embed */}
+            <div className="w-full h-48 md:h-56 overflow-hidden border border-white/20">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.2027817743603!2d-3.9978217383968153!3d5.366807492383354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb5b32863507%3A0xf164e8b92326322b!2sChez%20Talaat%20-%202%20Plateaux!5e0!3m2!1sen!2sci!4v1769873216651!5m2!1sen!2sci"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Chez Talaat - Google Maps"
+              />
+            </div>
+
+            {/* Google Maps Link */}
+            <a
+              href="https://www.google.com/maps/place/Chez+Talaat+-+2+Plateaux/@5.3668075,-3.9978217,19z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-3 text-sm text-gold hover:text-white transition-colors"
+            >
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              Ouvrir dans Google Maps
+            </a>
           </div>
 
           {/* Social Links */}
