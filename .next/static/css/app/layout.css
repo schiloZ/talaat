@@ -620,6 +620,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.ml-auto {
+  margin-left: auto;
+}
 .block {
   display: block;
 }
@@ -697,9 +700,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.min-h-\[350px\] {
-  min-height: 350px;
 }
 .min-h-\[400px\] {
   min-height: 400px;
@@ -1147,6 +1147,10 @@ video {
 .bg-center {
   background-position: center;
 }
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1226,6 +1230,10 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pb-12 {
   padding-bottom: 3rem;
@@ -1383,17 +1391,17 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-.text-white\/70 {
-  color: rgb(255 255 255 / 0.7);
-}
-.text-white\/80 {
-  color: rgb(255 255 255 / 0.8);
-}
 .text-white\/20 {
   color: rgb(255 255 255 / 0.2);
 }
 .text-white\/60 {
   color: rgb(255 255 255 / 0.6);
+}
+.text-white\/70 {
+  color: rgb(255 255 255 / 0.7);
+}
+.text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
 }
 .opacity-0 {
   opacity: 0;
@@ -1766,10 +1774,6 @@ body.menu-open {
     height: 14rem;
   }
 
-  .md\:min-h-\[300px\] {
-    min-height: 300px;
-  }
-
   .md\:min-h-\[350px\] {
     min-height: 350px;
   }
@@ -1784,6 +1788,15 @@ body.menu-open {
 
   .md\:gap-3 {
     gap: 0.75rem;
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .md\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .md\:p-12 {
@@ -1803,6 +1816,11 @@ body.menu-open {
   .md\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:text-2xl {

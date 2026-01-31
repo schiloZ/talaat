@@ -7,14 +7,20 @@ export default function Hero() {
       {/* Video Background - Plus visible */}
       <div className="absolute inset-0">
         <video
-          src="https://res.cloudinary.com/dzhkssyry/video/upload/v1769783632/movie_wflalr.mp4"
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
-        />
-        {/* Overlay plus léger + vignette */}
+          preload="metadata"
+          poster="https://res.cloudinary.com/dzhkssyry/video/upload/so_1,f_jpg,q_auto/movie_wflalr.jpg"
+          className="w-full h-full object-contain md:object-cover"
+        >
+          <source
+            src="https://res.cloudinary.com/dzhkssyry/video/upload/q_auto:good,vc_h264,ac_aac/movie_wflalr.mp4"
+            type="video/mp4"
+          />
+        </video>
+
         <div className="absolute inset-0 bg-warm-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-warm-black via-transparent to-warm-black/50" />
       </div>
@@ -52,7 +58,7 @@ export default function Hero() {
         </p>
 
         <a
-          href="#reservation"
+          href="#menu"
           className="inline-block font-montserrat text-xs tracking-[3px] uppercase px-10 py-4 bg-primary-red text-white hover:bg-white hover:text-primary-red transition-all duration-300 animate-fade-in-up-delay-5"
         >
           Découvrir
