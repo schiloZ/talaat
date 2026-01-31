@@ -7,7 +7,7 @@ export default function Hero2() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1400&q=80"
+          src="/images/Taalat.jpeg"
           alt="Restaurant background"
           fill
           className="object-cover"
