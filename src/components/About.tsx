@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -11,23 +11,23 @@ export default function About() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     );
 
-    const fadeElements = sectionRef.current?.querySelectorAll('.fade-in');
+    const fadeElements = sectionRef.current?.querySelectorAll(".fade-in");
     fadeElements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      id="about" 
+      id="about"
       className="py-32 px-[5%] bg-gradient-to-b from-warm-black to-charcoal"
     >
       {/* Section Header */}
@@ -69,24 +69,29 @@ export default function About() {
             Talaat
           </h3>
           <p className="text-lg md:text-xl leading-relaxed text-cream/85 mb-6">
-            Bienvenue chez Talaat, où chaque plat raconte une histoire de passion et de tradition. 
-            Niché au cœur du quartier Mirador à Abidjan, notre restaurant vous invite à découvrir 
-            une cuisine authentique qui marie les saveurs locales aux techniques culinaires raffinées.
+            Bienvenue chez Talaat, où chaque plat raconte une histoire de
+            passion et de tradition orientale. Niché au Boulevard Latrille à
+            Abidjan, notre restaurant vous invite à découvrir une cuisine
+            libanaise authentique, riche en saveurs, mêlant mezzés
+            traditionnels, grillades parfumées et spécialités orientales.
           </p>
           <p className="text-lg md:text-xl leading-relaxed text-cream/85 mb-6">
-            Notre chef, fort de plusieurs décennies d&apos;expérience, sélectionne méticuleusement 
-            les meilleurs ingrédients locaux pour créer des plats qui éveillent tous vos sens. 
-            Dans une atmosphère chaleureuse et élégante, laissez-vous transporter par une 
-            expérience gastronomique unique.
+            Notre chef, héritier d&apos;un savoir-faire ancestral, sélectionne
+            méticuleusement les meilleurs ingrédients pour créer des plats
+            généreux qui éveillent tous vos sens. Dans un cadre moderne et
+            convivial, laissez-vous transporter par une expérience gastronomique
+            aux saveurs du Liban.
           </p>
-          
+
           {/* Chef Signature */}
           <div className="flex items-center gap-6 mt-12 pt-8 border-t border-white/10">
             <div className="w-[70px] h-[70px] rounded-full bg-primary-red flex items-center justify-center font-parisienne text-3xl text-white">
               T
             </div>
             <div>
-              <h4 className="font-playfair text-xl text-white mb-1">Chef Talaat</h4>
+              <h4 className="font-playfair text-xl text-white mb-1">
+                Chef Talaat
+              </h4>
               <span className="font-montserrat text-xs tracking-widest uppercase text-gold">
                 Chef Exécutif & Fondateur
               </span>
